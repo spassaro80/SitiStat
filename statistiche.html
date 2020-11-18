@@ -1,0 +1,1302 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta charset=UTF-8 />
+<title>Statistiche</title>
+<link href="css/stile.css" rel="stylesheet" type="text/css" media="screen">
+<link href="style.css" rel="stylesheet" type="text/css" media="screen">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+
+<!-- Load pdf scripts -->
+<script type="text/javascript" src="//cdn.rawgit.com/MrRio/jsPDF/master/dist/jspdf.min.js"></script>
+<script type="text/javascript" src="//cdn.rawgit.com/niklasvh/html2canvas/0.5.0-alpha2/dist/html2canvas.min.js"></script>
+
+<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<script type="text/javascript">
+		function addValuetpd(i){
+		var initialValuetpd=0
+		initialValuetpd=parseInt(document.getElementById('tpd').value);
+		initialValuetpd+=i;
+		document.getElementById('tpd').value=initialValuetpd;
+		}
+		function addValuetpc(i){
+		var initialValuetpc=0
+		initialValuetpc=parseInt(document.getElementById('tpc').value);
+		initialValuetpc+=i;
+		document.getElementById('tpc').value=initialValuetpc;
+		}
+		function addValuetps(i){
+		var initialValuetps=0
+		initialValuetps=parseInt(document.getElementById('tps').value);
+		initialValuetps+=i;
+		document.getElementById('tps').value=initialValuetps;
+		}
+		</script>
+		<!-- CALCIO D'ANGOLO -->
+		<script type="text/javascript">
+			function addValue1(i){
+			var initialValue1=0
+			initialValue1=parseInt(document.getElementById('testo1').value);
+			initialValue1+=i;
+			document.getElementById('testo1').value=initialValue1;
+			}
+			</script>
+			<!-- CROSS -->
+		<script type="text/javascript">
+			function addValuecd(i){
+			var initialValuecd=0
+			initialValuecd=parseInt(document.getElementById('cd').value);
+			initialValuecd+=i;
+			document.getElementById('cd').value=initialValuecd;
+			}
+		  function addValuecc(i){
+		  var initialValuecc=0
+		  initialValuecc=parseInt(document.getElementById('cc').value);
+		  initialValuecc+=i;
+		  document.getElementById('cc').value=initialValuecc;
+		  }
+		  function addValuecs(i){
+		  var initialValuecs=0
+		  initialValuecs=parseInt(document.getElementById('cs').value);
+		  initialValuecs+=i;
+		  document.getElementById('cs').value=initialValuecs;
+		  }
+
+			</script>
+			<!-- PUNIZIONI OFFENSIVE -->
+		<script type="text/javascript">
+			function addValuepdo(i){
+			var initialValuepdo=0
+			initialValuepdo=parseInt(document.getElementById('pdo').value);
+			initialValuepdo+=i;
+			document.getElementById('pdo').value=initialValuepdo;
+			}
+		  function addValuepco(i){
+		  var initialValuepco=0
+		  initialValuepco=parseInt(document.getElementById('pco').value);
+		  initialValuepco+=i;
+		  document.getElementById('pco').value=initialValuepco;
+		  }
+		  function addValuepso(i){
+		  var initialValuepso=0
+		  initialValuepso=parseInt(document.getElementById('pso').value);
+		  initialValuepso+=i;
+		  document.getElementById('pso').value=initialValuepso;
+		  }
+			</script>
+		  <!-- PUNIZIONI DIFENSIVE -->
+		<script type="text/javascript">
+		  function addValuepd(i){
+		  var initialValuepd=0
+		  initialValuepd=parseInt(document.getElementById('pd').value);
+		  initialValuepd+=i;
+		  document.getElementById('pd').value=initialValuepd;
+		  }
+		  function addValuepc(i){
+		  var initialValuepc=0
+		  initialValuepc=parseInt(document.getElementById('pc').value);
+		  initialValuepc+=i;
+		  document.getElementById('pc').value=initialValuepc;
+		  }
+		  function addValueps(i){
+		  var initialValueps=0
+		  initialValueps=parseInt(document.getElementById('ps').value);
+		  initialValueps+=i;
+		  document.getElementById('ps').value=initialValueps;
+		  }
+		  </script>
+				<!-- TIRI FUORI -->
+		<script type="text/javascript">
+			function addValuetfd(i){
+			var initialValuetfd=0
+			initialValuetfd=parseInt(document.getElementById('tfd').value);
+			initialValuetfd+=i;
+			document.getElementById('tfd').value=initialValuetfd;
+			}
+		  function addValuetfc(i){
+		  var initialValuetfc=0
+		  initialValuetfc=parseInt(document.getElementById('tfc').value);
+		  initialValuetfc+=i;
+		  document.getElementById('tfc').value=initialValuetfc;
+		  }
+		  function addValuetfs(i){
+		  var initialValuetfs=0
+		  initialValuetfs=parseInt(document.getElementById('tfs').value);
+		  initialValuetfs+=i;
+		  document.getElementById('tfs').value=initialValuetfs;
+		  }
+			</script>
+					<!-- PARATE -->
+		<script type="text/javascript">
+			function addValue5(i){
+			var initialValue5=0
+			initialValue5=parseInt(document.getElementById('testo5').value);
+			initialValue5+=i;
+			document.getElementById('testo5').value=initialValue5;
+			}
+			</script>
+						<!-- FUORIGIOCO -->
+		<script type="text/javascript">
+			function addValue6(i){
+			var initialValue6=0
+			initialValue6=parseInt(document.getElementById('testo6').value);
+			initialValue6+=i;
+			document.getElementById('testo6').value=initialValue6;
+			}
+			</script>
+		  <!-- TIRI IN PORTA OSPITI-->
+		<script type="text/javascript">
+		function addValuetpdos(i){
+		var initialValuetpdos=0
+		initialValuetpdos=parseInt(document.getElementById('tpdos').value);
+		initialValuetpdos+=i;
+		document.getElementById('tpdos').value=initialValuetpdos;
+		}
+		function addValuetpcos(i){
+		var initialValuetpcos=0
+		initialValuetpcos=parseInt(document.getElementById('tpcos').value);
+		initialValuetpcos+=i;
+		document.getElementById('tpcos').value=initialValuetpcos;
+		}
+		function addValuetpsos(i){
+		var initialValuetpsos=0
+		initialValuetpsos=parseInt(document.getElementById('tpsos').value);
+		initialValuetpsos+=i;
+		document.getElementById('tpsos').value=initialValuetpsos;
+		}
+		</script>
+		<!-- CALCIO D'ANGOLO -->
+		<script type="text/javascript">
+			function addValuecdos(i){
+			var initialValuecdos=0
+			initialValuecdos=parseInt(document.getElementById('cdos').value);
+			initialValuecdos+=i;
+			document.getElementById('cdos').value=initialValuecdos;
+			}
+			</script>
+			<!-- CROSS -->
+		<script type="text/javascript">
+			function addValuecroosd(i){
+			var initialValuecroosd=0
+			initialValuecroosd=parseInt(document.getElementById('croosd').value);
+			initialValuecroosd+=i;
+			document.getElementById('croosd').value=initialValuecroosd;
+			}
+		  function addValuecroosc(i){
+			var initialValuecroosc=0
+			initialValuecroosc=parseInt(document.getElementById('croosc').value);
+			initialValuecroosc+=i;
+			document.getElementById('croosc').value=initialValuecroosc;
+			}
+		  function addValuecrooss(i){
+			var initialValuecrooss=0
+			initialValuecrooss=parseInt(document.getElementById('crooss').value);
+			initialValuecrooss+=i;
+			document.getElementById('crooss').value=initialValuecrooss;
+			}
+			</script>
+			<!-- PUNIZIONI  OFFENSIVE-->
+		<script type="text/javascript">
+			function addValuepdoos(i){
+			var initialValuepdoos=0
+			initialValuepdoos=parseInt(document.getElementById('pdoos').value);
+			initialValuepdoos+=i;
+			document.getElementById('pdoos').value=initialValuepdoos;
+			}
+		  function addValuepcoos(i){
+		  var initialValuepcoos=0
+		  initialValuepcoos=parseInt(document.getElementById('pcoos').value);
+		  initialValuepcoos+=i;
+		  document.getElementById('pcoos').value=initialValuepcoos;
+		  }
+		  function addValuepsoos(i){
+		  var initialValuepsoos=0
+		  initialValuepsoos=parseInt(document.getElementById('psoos').value);
+		  initialValuepsoos+=i;
+		  document.getElementById('psoos').value=initialValuepsoos;
+		  }
+			</script>
+		  <!-- PUNIZIONI  DIFENSIVE-->
+		<script type="text/javascript">
+		  function addValuepdos(i){
+		  var initialValuepdos=0
+		  initialValuepdos=parseInt(document.getElementById('pdos').value);
+		  initialValuepdos+=i;
+		  document.getElementById('pdos').value=initialValuepdos;
+		  }
+		  function addValuepcos(i){
+		  var initialValuepcos=0
+		  initialValuepcos=parseInt(document.getElementById('pcos').value);
+		  initialValuepcos+=i;
+		  document.getElementById('pcos').value=initialValuepcos;
+		  }
+		  function addValuepsos(i){
+		  var initialValuepsos=0
+		  initialValuepsos=parseInt(document.getElementById('psos').value);
+		  initialValuepsos+=i;
+		  document.getElementById('psos').value=initialValuepsos;
+		  }
+		  </script>
+				<!-- TIRI FUORI OSPITI-->
+		<script type="text/javascript">
+			function addValuetfdos(i){
+			var initialValuetfdos=0
+			initialValuetfdos=parseInt(document.getElementById('tfdos').value);
+			initialValuetfdos+=i;
+			document.getElementById('tfdos').value=initialValuetfdos;
+			}
+		  function addValuetfcos(i){
+		  var initialValuetfcos=0
+		  initialValuetfcos=parseInt(document.getElementById('tfcos').value);
+		  initialValuetfcos+=i;
+		  document.getElementById('tfcos').value=initialValuetfcos;
+		  }
+		  function addValuetfsos(i){
+		  var initialValuetfsos=0
+		  initialValuetfsos=parseInt(document.getElementById('tfsos').value);
+		  initialValuetfsos+=i;
+		  document.getElementById('tfsos').value=initialValuetfsos;
+		  }
+
+			</script>
+					<!-- PARATE -->
+		<script type="text/javascript">
+			function addValuepaos(i){
+			var initialValuepaos=0
+			initialValuepaos=parseInt(document.getElementById('paos').value);
+			initialValuepaos+=i;
+			document.getElementById('paos').value=initialValuepaos;
+			}
+			</script>
+						<!-- FUORIGIOCO -->
+		<script type="text/javascript">
+			function addValuefos(i){
+			var initialValuefos=0
+			initialValuefos=parseInt(document.getElementById('fos').value);
+			initialValuefos+=i;
+			document.getElementById('fos').value=initialValuefos;
+			}
+			</script>
+
+		  <!-- TIRI IN PORTA 2 TEMPO-->
+		  <script type="text/javascript">
+		  function addValuetpd2t(i){
+		  var initialValuetpd2t=0
+		  initialValuetpd2t=parseInt(document.getElementById('tpd2t').value);
+		  initialValuetpd2t+=i;
+		  document.getElementById('tpd2t').value=initialValuetpd2t;
+		  }
+		  function addValuetpc2t(i){
+		  var initialValuetpc2t=0
+		  initialValuetpc2t=parseInt(document.getElementById('tpc2t').value);
+		  initialValuetpc2t+=i;
+		  document.getElementById('tpc2t').value=initialValuetpc2t;
+		  }
+		  function addValuetps2t(i){
+		  var initialValuetps2t=0
+		  initialValuetps2t=parseInt(document.getElementById('tps2t').value);
+		  initialValuetps2t+=i;
+		  document.getElementById('tps2t').value=initialValuetps2t;
+		  }
+		  </script>
+		  <!-- CALCIO D'ANGOLO -->
+		  <script type="text/javascript">
+		  	function addValue12t(i){
+		  	var initialValue12t=0
+		  	initialValue12t=parseInt(document.getElementById('testo12t').value);
+		  	initialValue12t+=i;
+		  	document.getElementById('testo12t').value=initialValue12t;
+		  	}
+		  	</script>
+		  	<!-- CROSS -->
+		  <script type="text/javascript">
+		  	function addValue22td(i){
+		  	var initialValue22td=0
+		  	initialValue22td=parseInt(document.getElementById('testo22td').value);
+		  	initialValue22td+=i;
+		  	document.getElementById('testo22td').value=initialValue22td;
+		  	}
+		    function addValue22tc(i){
+		    var initialValue22tc=0
+		    initialValue22tc=parseInt(document.getElementById('testo22tc').value);
+		    initialValue22tc+=i;
+		    document.getElementById('testo22tc').value=initialValue22tc;
+		    }
+		    function addValue22ts(i){
+		    var initialValue22ts=0
+		    initialValue22ts=parseInt(document.getElementById('testo22ts').value);
+		    initialValue22ts+=i;
+		    document.getElementById('testo22ts').value=initialValue22ts;
+		    }
+		  	</script>
+		  	<!-- PUNIZIONI OFFENSIVE -->
+		  <script type="text/javascript">
+		  	function addValuepdo2t(i){
+		  	var initialValuepdo2t=0
+		  	initialValuepdo2t=parseInt(document.getElementById('pdo2t').value);
+		  	initialValuepdo2t+=i;
+		  	document.getElementById('pdo2t').value=initialValuepdo2t;
+		  	}
+		    function addValuepco2t(i){
+		    var initialValuepco2t=0
+		    initialValuepco2t=parseInt(document.getElementById('pco2t').value);
+		    initialValuepco2t+=i;
+		    document.getElementById('pco2t').value=initialValuepco2t;
+		    }
+		    function addValuepso2t(i){
+		    var initialValuepso2t=0
+		    initialValuepso2t=parseInt(document.getElementById('pso2t').value);
+		    initialValuepso2t+=i;
+		    document.getElementById('pso2t').value=initialValuepso2t;
+		    }
+		  	</script>
+		    <!-- PUNIZIONI DIFENSIVE -->
+		  <script type="text/javascript">
+		    function addValuepd2t(i){
+		    var initialValuepd2t=0
+		    initialValuepd2t=parseInt(document.getElementById('pd2t').value);
+		    initialValuepd2t+=i;
+		    document.getElementById('pd2t').value=initialValuepd2t;
+		    }
+		    function addValuepc2t(i){
+		    var initialValuepc2t=0
+		    initialValuepc2t=parseInt(document.getElementById('pc2t').value);
+		    initialValuepc2t+=i;
+		    document.getElementById('pc2t').value=initialValuepc2t;
+		    }
+		    function addValueps2t(i){
+		    var initialValueps2t=0
+		    initialValueps2t=parseInt(document.getElementById('ps2t').value);
+		    initialValueps2t+=i;
+		    document.getElementById('ps2t').value=initialValueps2t;
+		    }
+		    </script>
+		  		<!-- TIRI FUORI -->
+		  <script type="text/javascript">
+		  	function addValuetfd2t(i){
+		  	var initialValuetfd2t=0
+		  	initialValuetfd2t=parseInt(document.getElementById('tfd2t').value);
+		  	initialValuetfd2t+=i;
+		  	document.getElementById('tfd2t').value=initialValuetfd2t;
+		  	}
+		    function addValuetfc2t(i){
+		    var initialValuetfc2t=0
+		    initialValuetfc2t=parseInt(document.getElementById('tfc2t').value);
+		    initialValuetfc2t+=i;
+		    document.getElementById('tfc2t').value=initialValuetfc2t;
+		    }
+		    function addValuetfs2t(i){
+		    var initialValuetfs2t=0
+		    initialValuetfs2t=parseInt(document.getElementById('tfs2t').value);
+		    initialValuetfs2t+=i;
+		    document.getElementById('tfs2t').value=initialValuetfs2t;
+		    }
+		  	</script>
+		  			<!-- PARATE -->
+		  <script type="text/javascript">
+		  	function addValue52t(i){
+		  	var initialValue52t=0
+		  	initialValue52t=parseInt(document.getElementById('testo52t').value);
+		  	initialValue52t+=i;
+		  	document.getElementById('testo52t').value=initialValue52t;
+		  	}
+		  	</script>
+		  				<!-- FUORIGIOCO -->
+		  <script type="text/javascript">
+		  	function addValue62t(i){
+		  	var initialValue62t=0
+		  	initialValue62t=parseInt(document.getElementById('testo62t').value);
+		  	initialValue62t+=i;
+		  	document.getElementById('testo62t').value=initialValue62t;
+		  	}
+		  	</script>
+		    <!-- TIRI IN PORTA OSPITI-->
+		  <script type="text/javascript">
+		  function addValuetpdos2t(i){
+		  var initialValuetpdos2t=0
+		  initialValuetpdos2t=parseInt(document.getElementById('tpdos2t').value);
+		  initialValuetpdos2t+=i;
+		  document.getElementById('tpdos2t').value=initialValuetpdos2t;
+		  }
+		  function addValuetpcos2t(i){
+		  var initialValuetpcos2t=0
+		  initialValuetpcos2t=parseInt(document.getElementById('tpcos2t').value);
+		  initialValuetpcos2t+=i;
+		  document.getElementById('tpcos2t').value=initialValuetpcos2t;
+		  }
+		  function addValuetpsos2t(i){
+		  var initialValuetpsos2t=0
+		  initialValuetpsos2t=parseInt(document.getElementById('tpsos2t').value);
+		  initialValuetpsos2t+=i;
+		  document.getElementById('tpsos2t').value=initialValuetpsos2t;
+		  }
+		  </script>
+		  <!-- CALCIO D'ANGOLO -->
+		  <script type="text/javascript">
+		  	function addValuecdos2t(i){
+		  	var initialValuecdos2t=0
+		  	initialValuecdos2t=parseInt(document.getElementById('cdos2t').value);
+		  	initialValuecdos2t+=i;
+		  	document.getElementById('cdos2t').value=initialValuecdos2t;
+		  	}
+		  	</script>
+		  	<!-- CROSS -->
+		  <script type="text/javascript">
+		  	function addValuecroos2td(i){
+		  	var initialValuecroos2td=0
+		  	initialValuecroos2td=parseInt(document.getElementById('croos2td').value);
+		  	initialValuecroos2td+=i;
+		  	document.getElementById('croos2td').value=initialValuecroos2td;
+		  	}
+		    function addValuecroos2tc(i){
+		    var initialValuecroos2tc=0
+		    initialValuecroos2tc=parseInt(document.getElementById('croos2tc').value);
+		    initialValuecroos2tc+=i;
+		    document.getElementById('croos2tc').value=initialValuecroos2tc;
+		    }
+		    function addValuecroos2ts(i){
+		    var initialValuecroos2ts=0
+		    initialValuecroos2ts=parseInt(document.getElementById('croos2ts').value);
+		    initialValuecroos2ts+=i;
+		    document.getElementById('croos2ts').value=initialValuecroos2ts;
+		    }
+		  	</script>
+		  	<!-- PUNIZIONI  OFFENSIVE-->
+		  <script type="text/javascript">
+		  	function addValuepdoos2t(i){
+		  	var initialValuepdoos2t=0
+		  	initialValuepdoos2t=parseInt(document.getElementById('pdoos2t').value);
+		  	initialValuepdoos2t+=i;
+		  	document.getElementById('pdoos2t').value=initialValuepdoos2t;
+		  	}
+		    function addValuepcoos2t(i){
+		    var initialValuepcoos2t=0
+		    initialValuepcoos2t=parseInt(document.getElementById('pcoos2t').value);
+		    initialValuepcoos2t+=i;
+		    document.getElementById('pcoos2t').value=initialValuepcoos2t;
+		    }
+		    function addValuepsoos2t(i){
+		    var initialValuepsoos2t=0
+		    initialValuepsoos2t=parseInt(document.getElementById('psoos2t').value);
+		    initialValuepsoos2t+=i;
+		    document.getElementById('psoos2t').value=initialValuepsoos2t;
+		    }
+		  	</script>
+		    <!-- PUNIZIONI  DIFENSIVE-->
+		  <script type="text/javascript">
+		    function addValuepdos2t(i){
+		    var initialValuepdos2t=0
+		    initialValuepdos2t=parseInt(document.getElementById('pdos2t').value);
+		    initialValuepdos2t+=i;
+		    document.getElementById('pdos2t').value=initialValuepdos2t;
+		    }
+		    function addValuepcos2t(i){
+		    var initialValuepcos2t=0
+		    initialValuepcos2t=parseInt(document.getElementById('pcos2t').value);
+		    initialValuepcos2t+=i;
+		    document.getElementById('pcos2t').value=initialValuepcos2t;
+		    }
+		    function addValuepsos2t(i){
+		    var initialValuepsos2t=0
+		    initialValuepsos2t=parseInt(document.getElementById('psos2t').value);
+		    initialValuepsos2t+=i;
+		    document.getElementById('psos2t').value=initialValuepsos2t;
+		    }
+		    </script>
+		  		<!-- TIRI FUORI OSPITI-->
+		  <script type="text/javascript">
+		  	function addValuetfdos2t(i){
+		  	var initialValuetfdos2t=0
+		  	initialValuetfdos2t=parseInt(document.getElementById('tfdos2t').value);
+		  	initialValuetfdos2t+=i;
+		  	document.getElementById('tfdos2t').value=initialValuetfdos2t;
+		  	}
+		    function addValuetfcos2t(i){
+		    var initialValuetfcos2t=0
+		    initialValuetfcos2t=parseInt(document.getElementById('tfcos2t').value);
+		    initialValuetfcos2t+=i;
+		    document.getElementById('tfcos2t').value=initialValuetfcos2t;
+		    }
+		    function addValuetfsos2t(i){
+		    var initialValuetfsos2t=0
+		    initialValuetfsos2t=parseInt(document.getElementById('tfsos2t').value);
+		    initialValuetfsos2t+=i;
+		    document.getElementById('tfsos2t').value=initialValuetfsos2t;
+		    }
+
+		  	</script>
+		  			<!-- PARATE -->
+		  <script type="text/javascript">
+		  	function addValuepaos2t(i){
+		  	var initialValuepaos2t=0
+		  	initialValuepaos2t=parseInt(document.getElementById('paos2t').value);
+		  	initialValuepaos2t+=i;
+		  	document.getElementById('paos2t').value=initialValuepaos2t;
+		  	}
+		  	</script>
+		  				<!-- FUORIGIOCO -->
+		  <script type="text/javascript">
+		  	function addValuefos2t(i){
+		  	var initialValuefos2t=0
+		  	initialValuefos2t=parseInt(document.getElementById('fos2t').value);
+		  	initialValuefos2t+=i;
+		  	document.getElementById('fos2t').value=initialValuefos2t;
+		  	}
+		  	</script>
+</head>
+<style>
+body {
+ width: 100%;
+ font-family: Arial, Verdana, sans-serif;
+ color: #000000;
+ margin: 0;
+ height: 1100px;
+
+
+
+
+}
+ .foglio1 { text-transform:uppercase;
+  }
+  .foglio { text-transform:uppercase;
+   }
+
+p {
+ margin: 3%;}
+
+
+
+h1,  h3 {
+ text-align: center}
+
+
+/* Create four equal columns that floats next to each other */
+.column {
+ float: left;
+ width: 50%;
+
+text-align: center;
+background:rgba(255, 140, 0, 0.6);
+padding-bottom: 20px;
+padding-top:  20px;
+}
+.columns {
+ float: left;
+ width: 50%;
+text-align: center;
+background:rgba(30, 144, 255, 0.6);
+padding-bottom: 20px;
+padding-top: 20px;
+}
+.column2t {
+ float: left;
+ width: 50%;
+text-align: center;
+background:rgba(30, 144, 255, 0.6);
+padding-bottom: 20px;
+padding-top:  20px;
+}
+.columns2t {
+ float: left;
+ width: 50%;
+text-align: center;
+background:rgba(255, 140, 0, 0.6);
+padding-bottom: 20px;
+padding-top: 20px;
+}
+
+/* Clear floats */
+.row:after {
+ content: "";
+ display: table;
+ clear: both;
+}
+.pulsante{text-align: right;
+					padding-right: 20px;
+}
+header {background-color:rgb(1, 28, 58);
+	color: white;
+	padding: 10px;
+}
+.info{
+	padding-left:  20px;
+}
+.tem2{
+	padding-left:  20px;
+}
+
+/* clearfix */
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+ .column {
+ width: 50%;
+ }
+ .column1 {
+ width: 50%;
+ }
+}
+
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+ .column {
+ width: 50%;
+ }
+ .column1 {
+ width: 50%;
+ }
+}
+
+
+</style>
+<body>
+	<header class="header clearfix">
+	<div style="text-align: center">
+
+		<h1 align='center'>STATISTICHE PARTITA</h1>
+	</div>
+	</header>
+<div id="container">
+
+    	<div class="menu">
+        	<div class="closeButton"><a class="icon-close"></a></div>
+        		<ul><br><br><br><br><br>
+<center><img src="ls.png" width="130px"></center>
+                	<li><a href="#">Home</a></li>
+                    <li><a href="#">Running</a></li>
+                    <li><a href="#">Percorsi</a></li>
+                    <li><a href="#">Allenamenti</a></li>
+                    <li><a href="#">Alimentazione</a></li>
+                    <li><a href="#">Contattaci</a></li>
+
+                </ul>
+        </div>
+        <div id="menuButton"><a class="icon-menu"></a></div>
+
+
+		<div class="pulsante">
+			<button style="display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: .5em 2em;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: #FDBE33 #000 #D77206;
+  border-radius: 6px;
+  background: linear-gradient(#F3AE0F, #E38916) #E38916;
+  transition: 0.2s;"onclick="window.print()">Stampa</button>
+		</div>
+		<div class="info">
+
+
+		<input type="text" id="fname" placeholder='Campionato'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;<input type="text" id="fname" placeholder='Luogo'> <br><br>
+		<input type="text" id="fname" placeholder='Data'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;<input type="text" id="fname" placeholder='Ora'> <br><br>
+		<input type="text" id="fname" placeholder='Tempo'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;<input type="text" id="fname" placeholder='Temperatura'>
+		<h2>1° TEMPO</h2>
+</div>
+		<div class="column">
+
+		<input class="foglio1" type="text" id="fname" placeholder="Nome Squadra"><br><br>
+		<div id="cronometro">
+		<div id="vis" style=" line-height: 27px;">00:00:00</div>
+		<div id="button_container" style="display: inline; margin-left: 10px;">
+			<button id="avvia" onclick="javascript:avvia();">AVVIA</button>
+			<button id="stop" onclick="javascript:ferma();">STOP</button>
+			<button id="azzera" onclick="javascript:azzera();">AZZERA</button>
+		</div>
+		</div>
+		<br><br>
+		<label for="tp">Tiri in porta:</label><br>
+		<input type="text" id="tpd" value="0"size="1">
+		<input type="text" id="tpc" value="0"size="1">&nbsp;
+		<input type="text" id="tps" value="0"size="1"><br>
+		<input type="button"  value="+" onclick="addValuetpd(1);">
+		<input type="button" value="-" onclick="addValuetpd(-1);">
+		<input type="button" value="+" onclick="addValuetpc(1);">
+		<input type="button" value="-" onclick="addValuetpc(-1);">
+		<input type="button" value="+" onclick="addValuetps(1);">
+		<input type="button" value="-" onclick="addValuetps(-1);">
+
+		<br><br>
+		<label for="tp">Tiri fuori:</label><br>
+		<input type="text" id="tfd" value="0"size="1">
+		<input type="text" id="tfc" value="0"size="1">&nbsp;
+		<input type="text" id="tfs" value="0"size="1"><br>
+		<input type="button" value="+" onclick="addValuetfd(1);">
+		<input type="button" value="-" onclick="addValuetfd(-1);">
+		<input type="button" value="+" onclick="addValuetfc(1);">
+		<input type="button" value="-" onclick="addValuetfc(-1);">
+		<input type="button" value="+" onclick="addValuetfs(1);">
+		<input type="button" value="-" onclick="addValuetfs(-1);">
+		<br><br>
+		<label for="tp">Punizioni Offensive:</label><br>
+		<input type="text" id="pdo" value="0"size="1">
+		<input type="text" id="pco" value="0"size="1">&nbsp;
+		<input type="text" id="pso" value="0"size="1"><br>
+		<input type="button" value="+" onclick="addValuepdo(1);">
+		<input type="button" value="-" onclick="addValuepdo(-1);">
+		<input type="button" value="+" onclick="addValuepco(1);">
+		<input type="button" value="-" onclick="addValuepco(-1);">
+		<input type="button" value="+" onclick="addValuepso(1);">
+		<input type="button" value="-" onclick="addValuepso(-1);">
+		<br><br>
+		<label for="tp">Punizioni Difensive:</label><br>
+		<input type="text" id="pd" value="0"size="1">
+		<input type="text" id="pc" value="0"size="1">&nbsp;
+		<input type="text" id="ps" value="0"size="1"><br>
+		<input type="button" value="+" onclick="addValuepd(1);">
+		<input type="button" value="-" onclick="addValuepd(-1);">
+		<input type="button" value="+" onclick="addValuepc(1);">
+		<input type="button" value="-" onclick="addValuepc(-1);">
+		<input type="button" value="+" onclick="addValueps(1);">
+		<input type="button" value="-" onclick="addValueps(-1);">
+		<br><br>
+		<label for="tp">Cross:</label><br>
+		<input type="text" id="cd" value="0"size="1">
+		<input type="text" id="cc" value="0"size="1">&nbsp;
+		<input type="text" id="cs" value="0"size="1"><br>
+		<input type="button" value="+" onclick="addValuecd(1);">
+		<input type="button" value="-" onclick="addValuecd(-1);">
+		<input type="button" value="+" onclick="addValuecc(1);">
+		<input type="button" value="-" onclick="addValuecc(-1);">
+		<input type="button" value="+" onclick="addValuecs(1);">
+		<input type="button" value="-" onclick="addValuecs(-1);">
+		<br><br>
+
+		<label for="tp">C. d'angolo:</label><br>
+		<input type="text" id="testo1" value="0"size="2">
+		<input type="button" value="+" onclick="addValue1(1);">
+		<input type="button" value="-" onclick="addValue1(-1);">
+		<br><br>
+
+		<label for="tp">Parate:</label><br>
+		<input type="text" id="testo5" value="0"size="2">
+		<input type="button" value="+" onclick="addValue5(1);">
+		<input type="button" value="-" onclick="addValue5(-1);">
+		<br><br>
+		<label for="tp">Fuorigioco:</label><br>
+		<input type="text" id="testo6" value="0"size="2">
+		<input type="button" value="+" onclick="addValue6(1);">
+		<input type="button" value="-" onclick="addValue6(-1);">
+		</div>
+
+
+
+		<div class="columns">
+
+		<input class="foglio1" type="text" id="fname" placeholder='Nome Squadra'><br><br>
+		<div id="cronometro1">
+		<div id="vis1" style=" line-height: 27px;">00:00:00</div>
+		<div id="button_container1" style="display: inline; margin-left: 10px;">
+			<button id="avvia1" onclick="javascript:avvia1();">AVVIA</button>
+			<button id="stop1" onclick="javascript:ferma1();">STOP</button>
+			<button id="azzera1" onclick="javascript:azzera1();">AZZERA</button>
+		</div>
+		</div>
+		<br><br>
+		<label for="tp">Tiri in porta:</label><br>
+		<input type="text" id="tpdos" value="0"size="1">
+		<input type="text" id="tpcos" value="0"size="1">&nbsp;
+		<input type="text" id="tpsos" value="0"size="1"><br>
+		<input type="button" value="+" onclick="addValuetpdos(1);">
+		<input type="button" value="-" onclick="addValuetpdos(-1);">
+		<input type="button" value="+" onclick="addValuetpcos(1);">
+		<input type="button" value="-" onclick="addValuetpcos(-1);">
+		<input type="button" value="+" onclick="addValuetpsos(1);">
+		<input type="button" value="-" onclick="addValuetpsos(-1);">
+
+		<br><br>
+		<label for="tp">Tiri fuori:</label><br>
+		<input type="text" id="tfdos" value="0"size="1">
+		<input type="text" id="tfcos" value="0"size="1">&nbsp;
+		<input type="text" id="tfsos" value="0"size="1"><br>
+		<input type="button" value="+" onclick="addValuetfdos(1);">
+		<input type="button" value="-" onclick="addValuetfdos(-1);">
+		<input type="button" value="+" onclick="addValuetfcos(1);">
+		<input type="button" value="-" onclick="addValuetfcos(-1);">
+		<input type="button" value="+" onclick="addValuetfsos(1);">
+		<input type="button" value="-" onclick="addValuetfsos(-1);">
+		<br><br>
+		<label for="tp">Punizioni Offensive:</label><br>
+		<input type="text" id="pdoos" value="0"size="1">
+		<input type="text" id="pcoos" value="0"size="1">&nbsp;
+		<input type="text" id="psoos" value="0"size="1"><br>
+		<input type="button" value="+" onclick="addValuepdoos(1);">
+		<input type="button" value="-" onclick="addValuepdoos(-1);">
+		<input type="button" value="+" onclick="addValuepcoos(1);">
+		<input type="button" value="-" onclick="addValuepcoos(-1);">
+		<input type="button" value="+" onclick="addValuepsoos(1);">
+		<input type="button" value="-" onclick="addValuepsoos(-1);">
+		<br><br>
+		<label for="tp">Punizioni Difensive:</label><br>
+		<input type="text" id="pdos" value="0"size="1">
+		<input type="text" id="pcos" value="0"size="1">&nbsp;
+		<input type="text" id="psos" value="0"size="1"><br>
+		<input type="button" value="+" onclick="addValuepdos(1);">
+		<input type="button" value="-" onclick="addValuepdos(-1);">
+		<input type="button" value="+" onclick="addValuepcos(1);">
+		<input type="button" value="-" onclick="addValuepcos(-1);">
+		<input type="button" value="+" onclick="addValuepsos(1);">
+		<input type="button" value="-" onclick="addValuepsos(-1);">
+		<br><br>
+		<label for="tp">Cross:</label><br>
+		<input type="text" id="croosd" value="0"size="1">
+			<input type="text" id="croosc" value="0"size="1">&nbsp;
+				<input type="text" id="crooss" value="0"size="1"><br>
+		<input type="button" value="+" onclick="addValuecroosd(1);">
+		<input type="button" value="-" onclick="addValuecroosd(-1);">
+		<input type="button" value="+" onclick="addValuecroosc(1);">
+		<input type="button" value="-" onclick="addValuecroosc(-1);">
+		<input type="button" value="+" onclick="addValuecrooss(1);">
+		<input type="button" value="-" onclick="addValuecrooss(-1);">
+		<br><br>
+		<label for="tp">C. d'angolo:</label><br>
+		<input type="text" id="cdos" value="0"size="2">
+		<input type="button" value="+" onclick="addValuecdos(1);">
+		<input type="button" value="-" onclick="addValuecdos(-1);">
+		<br><br>
+
+		<label for="tp">Parate:</label><br>
+		<input type="text" id="paos" value="0"size="2">
+		<input type="button" value="+" onclick="addValuepaos(1);">
+		<input type="button" value="-" onclick="addValuepaos(-1);">
+		<br><br>
+		<label for="tp">Fuorigioco:</label><br>
+		<input type="text" id="fos" value="0"size="2">
+		<input type="button" value="+" onclick="addValuefos(1);">
+		<input type="button" value="-" onclick="addValuefos(-1);">
+		</div>
+		</div>
+
+		<h2 class="tem2">2° TEMPO</h2>
+		<div class="column2t">
+		<input class="foglio1" type="text" id="fname" placeholder="Nome Squadra"><br><br>
+		<div id="cronometro2">
+			<div id="vis2" style=" line-height: 27px;">00:00:00</div>
+			<div id="button_container2" style="display: inline; margin-left: 10px;">
+				<button id="avvia2" onclick="javascript:avvia2();">AVVIA</button>
+				<button id="stop2" onclick="javascript:ferma2();">STOP</button>
+				<button id="azzera2" onclick="javascript:azzera2();">AZZERA</button>
+			</div>
+		</div>
+
+		<br><br>
+		<label for="tp">Tiri in porta:</label><br>
+		<input type="text" id="tpd2t" value="0"size="1">
+		<input type="text" id="tpc2t" value="0"size="1">&nbsp;
+		<input type="text" id="tps2t" value="0"size="1"><br>
+		<input type="button" value="+" onclick="addValuetpd2t(1);">
+		<input type="button" value="-" onclick="addValuetpd2t(-1);">
+		<input type="button" value="+" onclick="addValuetpc2t(1);">
+		<input type="button" value="-" onclick="addValuetpc2t(-1);">
+		<input type="button" value="+" onclick="addValuetps2t(1);">
+		<input type="button" value="-" onclick="addValuetps2t(-1);">
+
+		<br><br>
+		<label for="tp">Tiri fuori:</label><br>
+		<input type="text" id="tfd2t" value="0"size="1">
+		<input type="text" id="tfc2t" value="0"size="1">&nbsp;
+		<input type="text" id="tfs2t" value="0"size="1"><br>
+		<input type="button" value="+" onclick="addValuetfd2t(1);">
+		<input type="button" value="-" onclick="addValuetfd2t(-1);">
+		<input type="button" value="+" onclick="addValuetfc2t(1);">
+		<input type="button" value="-" onclick="addValuetfc2t(-1);">
+		<input type="button" value="+" onclick="addValuetfs2t(1);">
+		<input type="button" value="-" onclick="addValuetfs2t(-1);">
+		<br><br>
+		<label for="tp">Punizioni Offensive:</label><br>
+		<input type="text" id="pdo2t" value="0"size="1">
+		<input type="text" id="pco2t" value="0"size="1">&nbsp;
+		<input type="text" id="pso2t" value="0"size="1"><br>
+		<input type="button" value="+" onclick="addValuepdo2t(1);">
+		<input type="button" value="-" onclick="addValuepdo2t(-1);">
+		<input type="button" value="+" onclick="addValuepco2t(1);">
+		<input type="button" value="-" onclick="addValuepco2t(-1);">
+		<input type="button" value="+" onclick="addValuepso2t(1);">
+		<input type="button" value="-" onclick="addValuepso2t(-1);">
+		<br><br>
+		<label for="tp">Punizioni Difensive:</label><br>
+		<input type="text" id="pd2t" value="0"size="1">
+		<input type="text" id="pc2t" value="0"size="1">&nbsp;
+		<input type="text" id="ps2t" value="0"size="1"><br>
+		<input type="button" value="+" onclick="addValuepd2t(1);">
+		<input type="button" value="-" onclick="addValuepd2t(-1);">
+		<input type="button" value="+" onclick="addValuepc2t(1);">
+		<input type="button" value="-" onclick="addValuepc2t(-1);">
+		<input type="button" value="+" onclick="addValueps2t(1);">
+		<input type="button" value="-" onclick="addValueps2t(-1);">
+		<br><br>
+		<label for="tp">Cross:</label><br>
+		<input type="text" id="testo22td" value="0"size="1">
+		<input type="text" id="testo22tc" value="0"size="1">&nbsp;
+		<input type="text" id="testo22ts" value="0"size="1"><br>
+		<input type="button" value="+" onclick="addValue22td(1);">
+		<input type="button" value="-" onclick="addValue22td(-1);">
+		<input type="button" value="+" onclick="addValue22tc(1);">
+		<input type="button" value="-" onclick="addValue22tc(-1);">
+		<input type="button" value="+" onclick="addValue22ts(1);">
+		<input type="button" value="-" onclick="addValue22ts(-1);">
+		<br><br>
+
+		<label for="tp">C. d'angolo:</label><br>
+		<input type="text" id="testo12t" value="0"size="2">
+		<input type="button" value="+" onclick="addValue12t(1);">
+		<input type="button" value="-" onclick="addValue12t(-1);">
+		<br><br>
+
+		<label for="tp">Parate:</label><br>
+		<input type="text" id="testo52t" value="0"size="2">
+		<input type="button" value="+" onclick="addValue52t(1);">
+		<input type="button" value="-" onclick="addValue52t(-1);">
+		<br><br>
+		<label for="tp">Fuorigioco:</label><br>
+		<input type="text" id="testo62t" value="0"size="2">
+		<input type="button" value="+" onclick="addValue62t(1);">
+		<input type="button" value="-" onclick="addValue62t(-1);">
+		</div>
+
+
+		<div class="columns2t">
+		<input class="foglio1" type="text" id="fname" placeholder="Nome Squadra"><br><br>
+		<div id="cronometro3">
+			<div id="vis3" style=" line-height: 27px;">00:00:00</div>
+			<div id="button_container3" style="display: inline; margin-left: 10px;">
+				<button id="avvia3" onclick="javascript:avvia3();">AVVIA</button>
+				<button id="stop3" onclick="javascript:ferma3();">STOP</button>
+				<button id="azzera3" onclick="javascript:azzera3();">AZZERA</button>
+			</div>
+		</div>
+
+		<br><br>
+		<label for="tp">Tiri in porta:</label><br>
+		<input type="text" id="tpdos2t" value="0"size="1">
+		<input type="text" id="tpcos2t" value="0"size="1">&nbsp;
+		<input type="text" id="tpsos2t" value="0"size="1"><br>
+		<input type="button" value="+" onclick="addValuetpdos2t(1);">
+		<input type="button" value="-" onclick="addValuetpdos2t(-1);">
+		<input type="button" value="+" onclick="addValuetpcos2t(1);">
+		<input type="button" value="-" onclick="addValuetpcos2t(-1);">
+		<input type="button" value="+" onclick="addValuetpsos2t(1);">
+		<input type="button" value="-" onclick="addValuetpsos2t(-1);">
+
+		<br><br>
+		<label for="tp">Tiri fuori:</label><br>
+		<input type="text" id="tfdos2t" value="0"size="1">
+		<input type="text" id="tfcos2t" value="0"size="1">&nbsp;
+		<input type="text" id="tfsos2t" value="0"size="1"><br>
+		<input type="button" value="+" onclick="addValuetfdos2t(1);">
+		<input type="button" value="-" onclick="addValuetfdos2t(-1);">
+		<input type="button" value="+" onclick="addValuetfcos2t(1);">
+		<input type="button" value="-" onclick="addValuetfcos2t(-1);">
+		<input type="button" value="+" onclick="addValuetfsos2t(1);">
+		<input type="button" value="-" onclick="addValuetfsos2t(-1);">
+		<br><br>
+		<label for="tp">Punizioni Offensive:</label><br>
+		<input type="text" id="pdoos2t" value="0"size="1">
+		<input type="text" id="pcoos2t" value="0"size="1">&nbsp;
+		<input type="text" id="psoos2t" value="0"size="1"><br>
+		<input type="button" value="+" onclick="addValuepdoos2t(1);">
+		<input type="button" value="-" onclick="addValuepdoos2t(-1);">
+		<input type="button" value="+" onclick="addValuepcoos2t(1);">
+		<input type="button" value="-" onclick="addValuepcoos2t(-1);">
+		<input type="button" value="+" onclick="addValuepsoos2t(1);">
+		<input type="button" value="-" onclick="addValuepsoos2t(-1);">
+		<br><br>
+		<label for="tp">Punizioni Difensive:</label><br>
+		<input type="text" id="pdos2t" value="0"size="1">
+		<input type="text" id="pcos2t" value="0"size="1">&nbsp;
+		<input type="text" id="psos2t" value="0"size="1"><br>
+		<input type="button" value="+" onclick="addValuepdos2t(1);">
+		<input type="button" value="-" onclick="addValuepdos2t(-1);">
+		<input type="button" value="+" onclick="addValuepcos2t(1);">
+		<input type="button" value="-" onclick="addValuepcos2t(-1);">
+		<input type="button" value="+" onclick="addValuepsos2t(1);">
+		<input type="button" value="-" onclick="addValuepsos2t(-1);">
+		<br><br>
+		<label for="tp">Cross:</label><br>
+		<input type="text" id="croos2td" value="0"size="1">
+		<input type="text" id="croos2tc" value="0"size="1">&nbsp;
+		<input type="text" id="croos2ts" value="0"size="1"><br>
+		<input type="button" value="+" onclick="addValuecroos2td(1);">
+		<input type="button" value="-" onclick="addValuecroos2td(-1);">
+		<input type="button" value="+" onclick="addValuecroos2tc(1);">
+		<input type="button" value="-" onclick="addValuecroos2tc(-1);">
+		<input type="button" value="+" onclick="addValuecroos2ts(1);">
+		<input type="button" value="-" onclick="addValuecroos2ts(-1);">
+		<br><br>
+		<label for="tp">C. d'angolo:</label><br>
+		<input type="text" id="cdos2t" value="0"size="2">
+		<input type="button" value="+" onclick="addValuecdos2t(1);">
+		<input type="button" value="-" onclick="addValuecdos2t(-1);">
+		<br><br>
+
+		<label for="tp">Parate:</label><br>
+		<input type="text" id="paos2t" value="0"size="2">
+		<input type="button" value="+" onclick="addValuepaos2t(1);">
+		<input type="button" value="-" onclick="addValuepaos2t(-1);">
+		<br><br>
+		<label for="tp">Fuorigioco:</label><br>
+		<input type="text" id="fos2t" value="0"size="2">
+		<input type="button" value="+" onclick="addValuefos2t(1);">
+		<input type="button" value="-" onclick="addValuefos2t(-1);">
+		</div>
+
+		</div>
+
+
+<script>
+	$('#menuButton').click(function()
+{
+	   $('.menu').
+            animate({"left":"0px"}, 1000);
+       });
+
+       $('.closeButton').click(function()
+{
+	   $('.menu').animate({"left":"-200px"}, 1000);
+});
+
+</script>
+<script type="text/javascript">
+ var ore = 0, minuti = 0, secondi = 0, decimi = 0;
+var vis = "";
+var stop = true;
+
+function avvia() {
+	if(stop == true) {
+		stop = false;
+		cronometro();
+	}
+}
+
+function cronometro() {
+	if(stop == false) {
+		decimi++;
+		if(decimi > 9) {
+			decimi = 0;
+			secondi++;
+		}
+		if(secondi > 59) {
+			secondi = 0;
+			minuti++;
+		}
+		if(minuti > 59) {
+			minuti = 0;
+			ore++;
+		}
+		mostra();
+		setTimeout("cronometro()", 100);
+	}
+}
+function mostra() {
+	if(ore < 10) vis = "0"; else vis = ore;
+	if(minuti < 10) vis = vis + "0";
+	vis = vis + minuti + ":";
+	if(secondi < 10) vis = vis + "0";
+	vis = vis + secondi + ":" + decimi;
+	document.getElementById("vis").innerHTML = vis;
+}
+function ferma() {
+	stop = true;
+}
+function azzera() {
+	if(stop == false) {
+		stop = true;
+	}
+    ore = minuti = secondi = decimi = 0;
+	vis = "";
+	mostra();
+}
+
+var ore1 = 0, minuti1 = 0, secondi1 = 0, decimi1 = 0;
+var vis1 = "";
+var stop1 = true;
+
+function avvia1() {
+	if(stop1 == true) {
+		stop1 = false;
+		cronometro1();
+	}
+}
+
+function cronometro1() {
+	if(stop1 == false) {
+		decimi1++;
+		if(decimi1 > 9) {
+			decimi1 = 0;
+			secondi1++;
+		}
+		if(secondi1 > 59) {
+			secondi1 = 0;
+			minuti1++;
+		}
+		if(minuti1 > 59) {
+			minuti1 = 0;
+			ore1++;
+		}
+		mostra1();
+		setTimeout("cronometro1()", 100);
+	}
+}
+function mostra1() {
+	if(ore1 < 10) vis1 = "0"; else vis1 = ore1;
+	if(minuti1 < 10) vis1 = vis1 + "0";
+	vis1 = vis1 + minuti1 + ":";
+	if(secondi1 < 10) vis1 = vis1 + "0";
+	vis1 = vis1 + secondi1 + ":" + decimi1;
+	document.getElementById("vis1").innerHTML = vis1;
+}
+function ferma1() {
+	stop1 = true;
+}
+function azzera1() {
+	if(stop1 == false) {
+		stop1 = true;
+	}
+    ore1 = minuti1 = secondi1 = decimi1 = 0;
+	vis1 = "";
+	mostra1();
+}
+
+
+
+var ore2 = 0, minuti2 = 0, secondi2 = 0, decimi2 = 0;
+var vis2 = "";
+var stop2 = true;
+
+function avvia2() {
+	if(stop2 == true) {
+		stop2 = false;
+		cronometro2();
+	}
+}
+
+function cronometro2() {
+	if(stop2 == false) {
+		decimi2++;
+		if(decimi2 > 9) {
+			decimi2 = 0;
+			secondi2++;
+		}
+		if(secondi2 > 59) {
+			secondi2 = 0;
+			minuti2++;
+		}
+		if(minuti2 > 59) {
+			minuti2 = 0;
+			ore2++;
+		}
+		mostra2();
+		setTimeout("cronometro2()", 100);
+	}
+}
+function mostra2() {
+	if(ore2 < 10) vis2 = "0"; else vis2 = ore2;
+	if(minuti2 < 10) vis2 = vis2 + "0";
+	vis2 = vis2 + minuti2 + ":";
+	if(secondi2 < 10) vis2 = vis2 + "0";
+	vis2 = vis2 + secondi2 + ":" + decimi2;
+	document.getElementById("vis2").innerHTML = vis2;
+}
+function ferma2() {
+	stop2 = true;
+}
+function azzera2() {
+	if(stop2 == false) {
+		stop2 = true;
+	}
+    ore2 = minuti2 = secondi2 = decimi2 = 0;
+	vis2 = "";
+	mostra2();
+}
+
+
+
+var ore3 = 0, minuti3 = 0, secondi3 = 0, decimi3 = 0;
+var vis3 = "";
+var stop3 = true;
+
+function avvia3() {
+	if(stop3 == true) {
+		stop3 = false;
+		cronometro3();
+	}
+}
+
+function cronometro3() {
+	if(stop3 == false) {
+		decimi3++;
+		if(decimi3 > 9) {
+			decimi3 = 0;
+			secondi3++;
+		}
+		if(secondi3 > 59) {
+			secondi3 = 0;
+			minuti3++;
+		}
+		if(minuti3 > 59) {
+			minuti3 = 0;
+			ore3++;
+		}
+		mostra3();
+		setTimeout("cronometro3()", 100);
+	}
+}
+function mostra3() {
+	if(ore3 < 10) vis3 = "0"; else vis3 = ore3;
+	if(minuti3 < 10) vis3 = vis3 + "0";
+	vis3 = vis3 + minuti3 + ":";
+	if(secondi3 < 10) vis3 = vis3 + "0";
+	vis3 = vis3 + secondi3 + ":" + decimi3;
+	document.getElementById("vis3").innerHTML = vis3;
+}
+function ferma3() {
+	stop3 = true;
+}
+function azzera3() {
+	if(stop3 == false) {
+		stop3 = true;
+	}
+    ore3 = minuti3 = secondi3 = decimi3 = 0;
+	vis3 = "";
+	mostra3();
+}
+
+
+
+
+</script>
+</body>
+</html>
